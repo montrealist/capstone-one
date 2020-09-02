@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		minZoom: -2
 	});
 
-	const bounds = [[0,0], [1824, 2736]];
+	const bounds = [[-1080,-1490], [1824, 2736]];
 	const image = L.imageOverlay('gameMap.png', bounds).addTo(mymap);
 
 	mymap.fitBounds(bounds);
