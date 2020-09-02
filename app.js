@@ -1,15 +1,17 @@
+window.addEventListener('DOMContentLoaded', (event) => {
 
+	const mymap = L.map('mapid', {
+		crs: L.CRS.Simple,
+		minZoom: -2
+	});
 
-// const mymap = L.map('mapid').setView([26.505, 20], 13);
-const mymap = L.map('mapid', {
-	crs: L.CRS.Simple,
-	minZoom: -5
+	const bounds = [[0,0], [1824, 2736]];
+	const image = L.imageOverlay('gameMap.png', bounds).addTo(mymap);
+
+	mymap.fitBounds(bounds);
+
 });
 
-const bounds = [[0,0], [1824, 2736]];
-const image = L.imageOverlay('gameMap.png', bounds).addTo(mymap);
-
-mymap.fitBounds(bounds);
 				
 //const gameMap = L.map('gameMap', {
 //	crs: L.CRS.Simple,
